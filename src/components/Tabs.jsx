@@ -4,9 +4,9 @@ import React from 'react'
 import { useSearchParams } from "next/navigation"
 const Tabs = () => {
     const searchParams = useSearchParams() 
-    const genre = searchParams.get("kategori")
-    /*sayfanın URL'sinde "kategori" adlı bir sorgu parametresi(/?kategori=) varsa, bunun değerini genre değişkenine atar. 
-    Eğer "kategori" sorgu parametresi yoksa, genre değişkeni null olacaktır. */
+    const genre = searchParams.get("category")
+    /*sayfanın URL'sinde "category" adlı bir sorgu parametresi(/?category=) varsa, bunun değerini genre değişkenine atar. 
+    Eğer "category" sorgu parametresi yoksa, genre değişkeni null olacaktır. */
     const tabs = [
         {
             name: "En Populer",
@@ -24,7 +24,7 @@ const Tabs = () => {
     return (
         <div className='text-center px-5 ' style={{ backgroundColor: "#828792" }}>
             {tabs.map((tab, ind) => (
-                <Link href={`/?kategori=${tab.url}`} key={ind}
+                <Link href={`/?category=${tab.url}`} key={ind}
                     className={`px-3 text-decoration-none text-dark  ${tab.url === genre ? "fw-bold bg-light rounded" : ""}`}>
                     {tab.name}
                 </Link>

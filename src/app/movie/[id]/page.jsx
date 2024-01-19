@@ -13,7 +13,7 @@ const Page = async ({ params }) => {
     // Page adlı fonksiyonumla tekil film sayfasını oluşturdum
     const id = params.id;
     const mvDetail = await getMovie(id)
-    console.log(mvDetail, "TEK SAYFADA GORUNECEK FILMLER")
+    console.log(mvDetail, "TEK SAYFADA GORUNECEK FILM")
     return (
         <div className='position-relative img-fluid' >
             <Image style={{ objectFit: 'cover' }} className={`d-inline`} width={1280} height={481} src={`https://image.tmdb.org/t/p/original/${mvDetail?.backdrop_path || mvDetail?.poster_path}`} />
@@ -24,7 +24,6 @@ const Page = async ({ params }) => {
                 <div className="fs-4 fw-bold d-inline-block rounded my-1 p-1 " style={{ backgroundColor: "#828792" }}>{mvDetail?.vote_average}</div>
                 <div className="fs-2 w-25 fw-bold btn-outline-success d-block btn rounded my-5 p-1 ">More</div>
             </div>
-
         </div>
     )
 }

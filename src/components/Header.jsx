@@ -25,7 +25,6 @@ const Header = () => {
                 <input onKeyDown={ara} onClick={(e) => setKeyw(e.target.value)} type="text" placeholder='Film adı girin' className='form-control w-75 d-inline' />
                 <BiSearch size={30} style={{ marginLeft: "-40px" }} />
             </div>
-
         </div>
     )
 }
